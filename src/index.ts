@@ -41,7 +41,7 @@ export default {
 
 			const ip = request.headers.get('cf-connecting-ip');
 			const fetchCarbstatusData = (url: string) => {
-				return fetch(`${CARBSTATUS_API_ENDPOINT}/index?l=${url}${ip ? `&i=${ip}` : ''}`);
+				return fetch(`${CARBSTATUS_API_ENDPOINT}/index-by-ip?i=${ip}`);
 			};
 
 			const url = new URL(request.url);
